@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="node/config.html" />
     
-    <link rel="prev" href="master.html" />
+    
+    <link rel="prev" href="master/masterpush.html" />
     
 
     </head>
@@ -151,6 +153,38 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="master/config.html">
+            
+                <a href="master/config.html">
+            
+                    
+                    Master配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="master/masterpush.html">
+            
+                <a href="master/masterpush.html">
+            
+                    
+                    MasterPush
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter active" data-level="1.4.2" data-path="node.html">
@@ -163,6 +197,51 @@
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="node/config.html">
+            
+                <a href="node/config.html">
+            
+                    
+                    Node配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="node/nodepush.html">
+            
+                <a href="node/nodepush.html">
+            
+                    
+                    NodePush
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="node/nodecall.html">
+            
+                <a href="node/nodecall.html">
+            
+                    
+                    NodeCall
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -217,6 +296,33 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="node">Node</h1>
+<h4 id="&#x542F;&#x52A8;node&#x8282;&#x70B9;">&#x542F;&#x52A8;node&#x8282;&#x70B9;</h4>
+<pre><code>func StartNode(cfg NodeConf, controllers []interface{}, globalLeftPlugin ...tp.Plugin)
+</code></pre><p>controllers&#x662F;&#x5B9E;&#x73B0;&#x4E86;tp.PushCtx&#x63A5;&#x53E3;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x5B9E;&#x4F8B;</p>
+<h4 id="isonline">IsOnline</h4>
+<pre><code>func IsOnline(uid string) bool
+</code></pre><p>&#x5224;&#x65AD;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x662F;&#x5426;&#x5728;&#x7EBF;</p>
+<h4 id="grouponline">GroupOnline</h4>
+<pre><code>func GroupOnline(gid string) []string
+</code></pre><p>&#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x7FA4;&#x7EC4;&#x7684;&#x6240;&#x6709;&#x5728;&#x7EBF;&#x7528;&#x6237;</p>
+<h4 id="getsession">GetSession</h4>
+<pre><code>func GetSession(context tp.PreCtx) tp.Session
+</code></pre><p>&#x4ECE;tp.PreCtx&#x4E2D;&#x83B7;&#x53D6;&#x5BF9;&#x5E94;&#x7684;tp.Session</p>
+<h4 id="binduid">BindUid</h4>
+<pre><code>func BindUid(uid string, context tp.PreCtx) error
+</code></pre><p>&#x5C06;&#x7528;&#x6237;uid&#x548C;session&#x7ED1;&#x5B9A;</p>
+<h4 id="sendtouid">SendToUid</h4>
+<pre><code>func SendToUid(uid string, path string, req interface{}) (int, *tp.Status)
+</code></pre><p>&#x5411;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x53D1;&#x9001;&#x6D88;&#x606F;</p>
+<h4 id="joingroup">JoinGroup</h4>
+<pre><code>func JoinGroup(gid string, session tp.Session) (int, *tp.Status)
+</code></pre><p>&#x52A0;&#x5165;&#x7528;&#x6237;&#x7EC4;</p>
+<h4 id="leavegroup">LeaveGroup</h4>
+<pre><code>func LeaveGroup(gid string, session tp.Session) (int, *tp.Status)
+</code></pre><p>&#x79BB;&#x5F00;&#x7528;&#x6237;&#x7EC4;</p>
+<h4 id="sendtogroup">SendToGroup</h4>
+<pre><code>func SendToGroup(gid string, path string, req interface{}) (int, *tp.Status)
+</code></pre><p>&#x5411;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x7EC4;&#x53D1;&#x9001;&#x6D88;&#x606F;</p>
 
                                 
                                 </section>
@@ -244,10 +350,14 @@
 
             
                 
-                <a href="master.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Master">
+                <a href="master/masterpush.html" class="navigation navigation-prev " aria-label="Previous page: MasterPush">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="node/config.html" class="navigation navigation-next " aria-label="Next page: Node配置">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -256,7 +366,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Node","level":"1.4.2","depth":2,"previous":{"title":"Master","level":"1.4.1","depth":2,"path":"tpcluster/master.md","ref":"tpcluster/master.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tpcluster/node.md","mtime":"2019-11-19T09:45:27.897Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-19T09:58:50.529Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Node","level":"1.4.2","depth":2,"next":{"title":"Node配置","level":"1.4.2.1","depth":3,"path":"tpcluster/node/config.md","ref":"tpcluster/node/config.md","articles":[]},"previous":{"title":"MasterPush","level":"1.4.1.2","depth":3,"path":"tpcluster/master/masterpush.md","ref":"tpcluster/master/masterpush.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tpcluster/node.md","mtime":"2019-11-19T12:06:01.773Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-19T09:59:45.529Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
