@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Apix · GitBook</title>
+        <title>禁用函数名 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="forbid.html" />
+    <link rel="next" href="../rpcx/" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -102,7 +102,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="./">
             
                 <a href="./">
             
@@ -116,7 +116,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="forbid.html">
+        <li class="chapter active" data-level="1.2.1" data-path="forbid.html">
             
                 <a href="forbid.html">
             
@@ -299,7 +299,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Apix</a>
+        <a href=".." >禁用函数名</a>
     </h1>
 </div>
 
@@ -314,8 +314,58 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="apix">Apix</h1>
-<p>http&#x6846;&#x67B6;&#x5C01;&#x88C5;</p>
+                                <h1 id="&#x7981;&#x7528;&#x51FD;&#x6570;&#x540D;">&#x7981;&#x7528;&#x51FD;&#x6570;&#x540D;</h1>
+<h4 id="init">Init</h4>
+<pre><code>func (c *Controller) Init(baseController BaseController)
+</code></pre><p>&#x521D;&#x59CB;&#x5316;&#x63A7;&#x5236;&#x5668;&#x76F8;&#x5173;&#x64CD;&#x4F5C;</p>
+<h4 id="parseform">ParseForm</h4>
+<pre><code>func (c *Controller) ParseForm(obj interface{})
+</code></pre><p>&#x89E3;&#x6790;&#x8868;&#x5355;</p>
+<h4 id="getstring">GetString</h4>
+<pre><code>func (c *Controller) GetString(key string, def ...string) string
+</code></pre><p>&#x83B7;&#x53D6;string&#x7C7B;&#x578B;query&#x53C2;&#x6570;</p>
+<h4 id="getstrings">GetStrings</h4>
+<pre><code>func (c *Controller) GetStrings(key string, def ...[]string)
+</code></pre><p>&#x83B7;&#x53D6;string[]&#x7C7B;&#x578B;&#x53C2;&#x6570;,&#x6BD4;&#x5982;&#x8868;&#x5355;&#x4E2D;checkbox(input[type=checkbox])</p>
+<h4 id="getint">GetInt</h4>
+<pre><code>func (c *Controller) GetInt(key string, def ...int) (int, error)
+</code></pre><p>&#x83B7;&#x53D6;int&#x7C7B;&#x578B;&#x53C2;&#x6570;</p>
+<h4 id="getint8">GetInt8</h4>
+<pre><code>func (c *Controller) GetInt8(key string, def ...int8) (int8, error)
+</code></pre><p>&#x83B7;&#x53D6;int8&#x7C7B;&#x578B;&#x53C2;&#x6570;</p>
+<h4 id="getuint8">GetUint8</h4>
+<pre><code>func (c *Controller) GetUint8(key string, def ...uint8) (uint8, error)
+</code></pre><p>&#x83B7;&#x53D6;uint8&#x7C7B;&#x578B;&#x53C2;&#x6570;</p>
+<h4 id="getint16">GetInt16</h4>
+<pre><code>func (c *Controller) GetInt16(key string, def ...int) (int, error)
+</code></pre><p>&#x83B7;&#x53D6;int16&#x7C7B;&#x578B;&#x53C2;&#x6570;</p>
+<h4 id="getuint16">GetUint16</h4>
+<pre><code>func (c *Controller) GetUint16(key string, def ...uint16) (uint16, error)
+</code></pre><p>&#x83B7;&#x53D6;uint16&#x7C7B;&#x578B;&#x53C2;&#x6570;</p>
+<h4 id="getint32">GetInt32</h4>
+<pre><code>func (c *Controller) GetInt32(key string, def ...int32) (int32, error)
+</code></pre><p>&#x83B7;&#x53D6;int32&#x7C7B;&#x578B;&#x53C2;&#x6570;</p>
+<h4 id="getuint32">GetUint32</h4>
+<pre><code>func (c *Controller) GetUint32(key string, def ...uint32) (uint32, error)
+</code></pre><p>&#x83B7;&#x53D6;uint32&#x7C7B;&#x578B;&#x53C2;&#x6570;</p>
+<h4 id="getint64">GetInt64</h4>
+<pre><code>func (c *Controller) GetInt64(key string, def ...int64) (int64, error)
+</code></pre><p>&#x83B7;&#x53D6;int64&#x7C7B;&#x578B;&#x53C2;&#x6570;</p>
+<h4 id="getuint64">GetUint64</h4>
+<pre><code>func (c *Controller) GetUint64(key string, def ...uint64) (uint64, error)
+</code></pre><p>&#x83B7;&#x53D6;uint64&#x7C7B;&#x578B;&#x53C2;&#x6570;</p>
+<h4 id="getfloat">GetFloat</h4>
+<pre><code>func (c *Controller) GetFloat(key string, def ...float64) (float64, error)
+</code></pre><p>&#x83B7;&#x53D6;float64&#x7C7B;&#x578B;&#x53C2;&#x6570;</p>
+<h4 id="getfile">GetFile</h4>
+<pre><code>func (c *Controller) GetFile(key string) (multipart.File, *multipart.FileHeader, error)
+</code></pre><p>&#x83B7;&#x53D6;file&#x7C7B;&#x578B;&#x53C2;&#x6570;</p>
+<h4 id="header">Header</h4>
+<pre><code>func (c *Controller) Header(key string) string
+</code></pre><p>&#x83B7;&#x53D6;header</p>
+<h4 id="cookie">Cookie</h4>
+<pre><code>func (c *Controller) Cookie(key string) string
+</code></pre><p>&#x83B7;&#x53D6;cookie</p>
 
                                 
                                 </section>
@@ -343,12 +393,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 简介">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Apix">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="forbid.html" class="navigation navigation-next " aria-label="Next page: 禁用函数名">
+                <a href="../rpcx/" class="navigation navigation-next " aria-label="Next page: RpcX">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -359,7 +409,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Apix","level":"1.2","depth":1,"next":{"title":"禁用函数名","level":"1.2.1","depth":2,"path":"apix/forbid.md","ref":"apix/forbid.md","articles":[]},"previous":{"title":"简介","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"apix/README.md","mtime":"2019-11-19T11:50:04.841Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-21T03:40:55.575Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"禁用函数名","level":"1.2.1","depth":2,"next":{"title":"RpcX","level":"1.3","depth":1,"path":"rpcx/README.md","ref":"rpcx/README.md","articles":[]},"previous":{"title":"Apix","level":"1.2","depth":1,"path":"apix/README.md","ref":"apix/README.md","articles":[{"title":"禁用函数名","level":"1.2.1","depth":2,"path":"apix/forbid.md","ref":"apix/forbid.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"apix/forbid.md","mtime":"2019-11-21T03:40:41.224Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-21T03:40:55.575Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -2,6 +2,7 @@
 
 * [简介](README.md)
 * [Apix](apix/README.md)
+  * [禁用函数名](apix/forbid.md)
 * [RpcX](rpcx/README.md)
 * [TpCluster](tpcluster/README.md)
   * [Master](tpcluster/master.md)
