@@ -8,8 +8,9 @@ build/
 dist/
 tmp/
 lib/
+_book
 _book/
-
+book/
 # misc
 .idea/
 .happypack
