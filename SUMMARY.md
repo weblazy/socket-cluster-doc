@@ -1,6 +1,9 @@
 # Summary
 
 * [简介](README.md)
+* [原理](README.md)
+* [开发必读](README.md)
+  * [目录结构](README.md)
 * [Apix](apix/index.md)
   * [禁用函数名](apix/forbid.md)
 * [RpcX](rpcx/index.md)
@@ -41,5 +44,11 @@
     * [Postgresql](db/postgresql/index.md)
     * [Elasticsearch](db/elasticsearch/index.md)
     * [MongoDB](db/mongoDB/index.md)
-
+    * [ClickHouse](db/clickhouse/index.md)
+  * [锁选型](lock/index.md)
+    * [读写锁](lock/rwlock.md)
+    * [分段锁](lock/segmentlock/segmentlock.md)
+    * [自旋锁](lock/spinlock.md)
+    * [原子操作](lock/atomic.md)
+* [压测](benchmark/index.md)
 
