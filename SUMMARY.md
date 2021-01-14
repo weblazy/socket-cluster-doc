@@ -46,6 +46,7 @@
     * [MongoDB](db/mongoDB/index.md)
     * [ClickHouse](db/clickhouse/index.md)
   * [锁选型](lock/index.md)
+    * [互斥锁](lock/mutexlock.md)
     * [读写锁](lock/rwlock.md)
     * [分段锁](lock/segmentlock/segmentlock.md)
     * [自旋锁](lock/spinlock.md)
