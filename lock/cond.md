@@ -22,6 +22,7 @@ func (c *Cond) Broadcast()
 
 
 todo如图(后面补上):
+如下案例,感觉像是实现了一个channel的功能
 ```
 package main
 
