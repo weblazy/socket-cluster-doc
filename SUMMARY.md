@@ -45,6 +45,7 @@
     * [Elasticsearch](db/elasticsearch/index.md)
     * [MongoDB](db/mongoDB/index.md)
     * [ClickHouse](db/clickhouse/index.md)
+  * [索引选型](index/index.md)
   * [锁选型](lock/index.md)
     * [互斥锁](lock/mutex.md)
     * [读写锁](lock/rw.md)
@@ -52,5 +53,8 @@
     * [自旋锁](lock/spin.md)
     * [原子操作](lock/atomic.md)
     * [条件锁](lock/cond.md)
+    * [悲观锁](lock/pessimistic.md)
+    * [乐观锁](lock/optimistic.md)
+    * [重入锁](lock/reentry.md)
 * [压测](benchmark/index.md)
 
