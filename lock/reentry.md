@@ -1,5 +1,5 @@
 # 重入锁
-
+> 如果在本次操作锁释放之前需要再次使用锁的话,为了减少锁的切换，减少上下文切换，可以用重入锁，合并锁操作。使用重入锁之后可以防止其他线程在两次锁操作之间抢占锁
 ```
 package main
 
@@ -25,6 +25,7 @@ func (m *ReentryMutex) Lock() {
 	//如果当前持有锁的go routine就是调用者,重入次数+1
 	if atomic.LoadInt64(&m.owner) == gid {
 		m.reentry++
+		return
 	}
 
 	m.Mutex.Lock()
