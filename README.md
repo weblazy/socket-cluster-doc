@@ -1,3 +1,3 @@
 # LazyGo
 
-轻量web框架
+doc
