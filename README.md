@@ -1,3 +1,3 @@
-# LazyGo
+# socket-cluster
 
 doc
