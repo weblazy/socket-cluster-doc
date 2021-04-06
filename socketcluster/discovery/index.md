@@ -16,13 +16,4 @@ type ServiceDiscovery interface {
 ```
 自定义协议接口
 
-####Protocol
-```
-type Connection interface {
-	ReadMsg() ([]byte, error)
-	WriteMsg(data []byte) error
-	Close() error
-	Addr() string
-}
-```
-自定义协议接口
+

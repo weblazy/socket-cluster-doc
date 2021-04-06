@@ -11,7 +11,7 @@ type Protocol interface {
 ```
 自定义协议接口
 
-####Protocol
+####Connection
 ```
 type Connection interface {
 	ReadMsg() ([]byte, error)
@@ -20,4 +20,4 @@ type Connection interface {
 	Addr() string
 }
 ```
-自定义协议接口
+自定义连接接口

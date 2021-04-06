@@ -12,8 +12,8 @@ type SessionStorage interface {
 }
 ```
 
-####启动node节点
+####RedisStorage
 ```
-func NewNode(cfg *NodeConf) (Node, error)
+func NewRedisStorage(redisNodeList []*RedisNode) *RedisStorage 
 ```
-启动node节点程序入口
+redis实现方案
