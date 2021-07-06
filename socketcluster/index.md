@@ -1,3 +1,5 @@
 # SocketCluster
 
-分布式长连接tcp框架
+SocketCluster是golang语言实现的分布式长连接集群框架,插件式支持内置tpc,quic,websocket三种协议,用户可以实现相应的interface,实现更多的自定义协议
+
+主要功能是维护一个长连接集群,自动实现服务发现,不仅可以在虚拟机环境中部署,还可以在k8s容器环境中使用.

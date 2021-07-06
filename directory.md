@@ -1,14 +1,15 @@
+目录结构如下
 ```
 .
 ├── LICENSE
 ├── README.md
 ├── README_ENGLISH.md
-├── admin
+├── admin(后台管理和监控程序)
 │   ├── admin.go
 │   └── html
 │       └── index.html
-├── connect
-├── discovery
+├── connect(长连接相关代码)
+├── discovery(服务发现相关代码)
 │   ├── discover.go
 │   ├── etcd_discovery
 │   │   └── etcd_discovery.go
@@ -20,14 +21,14 @@
 │   └── performance_test.md
 ├── go.mod
 ├── go.sum
-├── logx
+├── logx(日志模块)
 │   ├── fileLogger.go
 │   ├── filelogger_test.go
 │   ├── log.go
 │   ├── logx.go
 │   ├── stdlogger.go
 │   └── stdlogger_test.go
-├── node
+├── node(核心业务逻辑)
 │   ├── common.go
 │   ├── conf.pb.go
 │   ├── conf.proto
@@ -40,7 +41,7 @@
 │   └── session.go
 ├── pic
 │   └── websocket.png
-├── protocol
+├── protocol(内置tcp,quic,ws协议实现)
 │   ├── flow_proto.go
 │   ├── protocol.go
 │   ├── quic_protocol
@@ -55,7 +56,7 @@
 │   └── ws_protocol
 │       ├── ws_connection.go
 │       └── ws_protocol.go
-├── session_storage
+├── session_storage(用户在线状态维护)
 │   ├── redis_storage
 │   │   └── redis_storage.go
 │   └── session_storage.go
