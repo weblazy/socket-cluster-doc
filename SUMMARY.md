@@ -28,8 +28,8 @@
 * [常见问题](question/index.md)
   * [通信协议](protocol/index.md)
     * [Tcp协议粘包](question/tcp.md)
-    * [扩散读还是扩散写](question/tcp.md)
-    * [分布式Id生成](question/tcp.md)
-    * [选择推还是拉](question/tcp.md)
+    * [扩散读还是扩散写](question/groupmsg.md)
+    * [分布式Id生成](question/id.md)
+    * [选择推还是拉](question/pushorpull.md)
 * [压测](benchmark/index.md)
 
