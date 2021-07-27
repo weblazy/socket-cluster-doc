@@ -2,6 +2,8 @@
 
 # 架构框图
 ![scheme 1](pic/socket_cluster.png)
+- 使用business_client将业务和节点分离部署
+![scheme 1](pic/business_client.png)
 
 - 后端(golang): https://github.com/weblazy/socket-cluster
 - 使用demo:	
