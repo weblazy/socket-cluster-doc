@@ -99,3 +99,4 @@ func (this *FlowProtocol) Pack(data []byte) ([]byte, error) {
 	return buf.Bytes(), nil
 }
 ```
+如果发现body_length使用4个字节太长或者太短,可以使用varint编码,每个字节最后一位为1则表明后面的字节还是属于当前数据的,如果是0那么这是当前数据的最后一个字节数据
