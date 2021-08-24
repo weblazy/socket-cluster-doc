@@ -23,7 +23,27 @@ spec:
 ```
 {headless service}.{namespace}.svc.cluster.local 解析出节点IP。
 ```
-因此我们可以使用Headerless Service和DNS解析配合获取所有节点的ip进而实现节点之间互相连接通信,并且实现自定义的负载均衡策略.
+因此我们可以使用Headerless Service和DNS解析配合获取所有节点的ip进而实现节点之间互相连接通信,并且实现自定义的负载均衡策略.可以通过环境变量获取本节点的ip
+```
+    env:
+    - name: POD_OWN_IP_ADDRESS
+      valueFrom:
+        fieldRef:
+          fieldPath: status.podIP
+    - name: POD_OWN_NAME
+      valueFrom:
+        fieldRef:
+          fieldPath: metadata.name
+    - name: POD_OWN_NAMESPACE
+      valueFrom:
+        fieldRef:
+          fieldPath: metadata.namespace
+```
+```
+POD_OWN_IP_ADDRESS=100.107.55.20
+POD_OWN_NAME=you_pod_name
+POD_OWN_NAMESPACE=dev
+```
 ``` 
     host = flag.String("host", "{headless service}.{namespace}.svc.cluster.local:9527", "the  host")
 	common.NodeInfo, err = node.NewNode(node.NewNodeConf(*host, protocolHandler, sessionStorageHandler, discoveryHandler, onMsg).WithPort(*port))
