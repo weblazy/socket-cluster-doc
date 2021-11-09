@@ -289,7 +289,7 @@ func (tw *TimingWheel) delete(key interface{}) {
 ```
 
 - 时间轮优化方案
-![scheme 1](pic/timingwhile.png)
+![scheme 1](../pic/timingwhile.png)
 
 ```
 package main
